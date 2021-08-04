@@ -1,0 +1,35 @@
+.wrap {
+  width: 100%;
+  min-height: 1000px;
+  background-color: rgb(231, 228, 228);
+
+  &.black {
+    background-color: #252525;
+
+    .header {
+      background-color: #000;
+    }
+
+    .registration {
+      background-color: #000;
+      border: 2px solid $color_green;
+
+      .registration__title {
+        color: #fff;
+      }
+
+      .registtation__input-name {
+        color: #fff;
+      }
+
+      .registration__input {
+        color: #fff;
+        background: #252525;
+      }
+
+      .registration__btn {
+        color: #fff;
+      }
+    }
+  }
+}
