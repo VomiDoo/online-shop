@@ -1,7 +1,7 @@
 .registration__wrap {
   width: 99vw;
   height: 1000px;
-  background: url(../../img/logo.jpg) repeat right;
+  background: url(../../img/logo.jpg) repeat right top;
   padding: 20px 0;
 }
 
@@ -59,4 +59,8 @@
   color: #252525;
   background: transparent;
   border: none;
+}
+
+.error {
+  border: 2px solid red;
 }
