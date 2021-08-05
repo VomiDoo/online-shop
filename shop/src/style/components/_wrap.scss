@@ -32,5 +32,32 @@
         color: #fff;
       }
     }
+
+    .login-window__wrap {
+      background-color: #252525 ;
+    }
+
+    .login-window {
+      background-color: #000;
+      border: 2px solid $color_green;
+    }
+
+    .login-window__title {
+      color: #fff;
+    }
+
+    .login-window__input-name {
+      color: #fff;
+    }
+
+    .login-window__input {
+      color: #fff;
+      background-color: #252525;
+      border: 2px solid $color_green;
+    }
+
+    .login-window__btn {
+      color: #fff;
+    }
   }
 }

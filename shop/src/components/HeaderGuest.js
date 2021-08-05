@@ -4,7 +4,14 @@ const HeaderGuest = () => {
   const history = useHistory();
   return (
     <div className="header__guest">
-      <button className="header__btn">Login</button>
+      <button
+        className="header__btn"
+        onClick={() => {
+          history.push("/home/login");
+        }}
+      >
+        Login
+      </button>
       <button
         className="header__btn"
         onClick={() => history.push("/registration")}

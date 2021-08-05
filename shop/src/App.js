@@ -11,12 +11,11 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users));
   }, [users]);
-  console.log(JSON.parse(localStorage.getItem("users")));
   return (
     <div className={`wrap ${theme}`}>
       <Switch>
         <Route path="/home">
-          <Container />
+          <Container users={users} />
         </Route>
         <Route path="/registration">
           <RegistrationForm users={users} setUsers={setUsers} />
