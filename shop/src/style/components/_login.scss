@@ -30,6 +30,7 @@
   z-index: 10;
 }
 
+
 .login-window__title {
     font-size: 30px;
     font-weight: 600;
@@ -37,6 +38,7 @@
 
 .login-window__input-name {
     font-size: 20px;
+    font-weight: 600;
 }
 
 .login-window__input {
@@ -61,4 +63,10 @@
     color: #252525;
     background: transparent;
     border: none;
+}
+
+.error {
+    color: red;
+    border: 2px solid red;
+    border-radius: 25px;
 }

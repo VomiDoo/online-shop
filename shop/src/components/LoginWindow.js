@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const LoginWindow = ({ users }) => {
+const LoginWindow = ({ setUser, setGuest }) => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
+  const users = useSelector((state) => state.users.users);
 
   const loginHandler = ({ target }) => {
     setLogin(target.value);
@@ -17,6 +19,8 @@ const LoginWindow = ({ users }) => {
   const confirmHandler = () => {
     users.forEach((user) => {
       if (user.login === login && user.password === password) {
+        setGuest(false);
+        setUser(user);
         history.push("/home");
       }
     });
@@ -31,24 +35,24 @@ const LoginWindow = ({ users }) => {
       <div className="login-window__wrap"></div>
       <div className="login-window">
         <h2 className="login-window__title">Login</h2>
-        <lable className="login-window__input-name">
+        <p className="login-window__input-name">
           Login
           <br></br>
           <input
             type="text"
-            className="login-window__input"
+            className={`login-window__input ${login ? "" : "error"}`}
             onChange={loginHandler}
           ></input>
-        </lable>
-        <lable className="login-window__input-name">
+        </p>
+        <p className="login-window__input-name">
           Password
           <br></br>
           <input
-            type="text"
-            className="login-window__input"
+            type="password"
+            className={`login-window__input ${password ? "" : "error"}`}
             onChange={passwordHandler}
           ></input>
-        </lable>
+        </p>
         <div className="login-window__btns">
           <button className="login-window__btn" onClick={confirmHandler}>
             Confirm

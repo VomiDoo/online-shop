@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../reducers/usersSlice";
 
-const RegistrationForm = ({ users, setUsers }) => {
+const RegistrationForm = () => {
   const history = useHistory();
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
+
+  const dispatch = useDispatch();
 
   const saveLoginHandler = ({ target }) => {
     setLogin(target.value);
@@ -26,10 +30,14 @@ const RegistrationForm = ({ users, setUsers }) => {
 
   const saveUserHandler = () => {
     if (login && password && email && address) {
-      setUsers([
-        ...users,
-        { login: login, password: password, email: email, address: address },
-      ]);
+      dispatch(
+        addUser({
+          login: login,
+          password: password,
+          email: email,
+          address: address,
+        })
+      );
       history.push("/home");
     }
   };
@@ -43,34 +51,34 @@ const RegistrationForm = ({ users, setUsers }) => {
       <div className="registration">
         <h2 className="registration__title">Registration</h2>
         <div className="registration__form">
-          <lable className="registtation__input-name">
+          <p className="registtation__input-name">
             Login <br></br>
             <input
               className={`registration__input ${login ? "" : "error"}`}
               onChange={saveLoginHandler}
             ></input>
-          </lable>
-          <lable className="registtation__input-name">
+          </p>
+          <p className="registtation__input-name">
             Password <br></br>
             <input
               className={`registration__input ${password ? "" : "error"}`}
               onChange={savePasswordHandler}
             ></input>
-          </lable>
-          <lable className="registtation__input-name">
+          </p>
+          <p className="registtation__input-name">
             Email <br></br>
             <input
               className={`registration__input ${email ? "" : "error"}`}
               onChange={saveEmailHandler}
             ></input>
-          </lable>
-          <lable className="registtation__input-name">
+          </p>
+          <p className="registtation__input-name">
             Adress <br></br>
             <input
               className={`registration__input ${address ? "" : "error"}`}
               onChange={saveAddHandler}
             ></input>
-          </lable>
+          </p>
         </div>
         <div className="registration__btns">
           <button className="registration__btn" onClick={saveUserHandler}>

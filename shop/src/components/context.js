@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export const themeContext = React.createContext("");
 
 export const Theme = ({ children }) => {
-  const [theme, setTheme] = useState({ theme: "" });
+  const [theme, setTheme] = useState(
+    JSON.parse(localStorage.getItem("theme")) || { theme: "" }
+  );
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
 
   const toggleTheme = () => {
     if (theme.theme === "") {

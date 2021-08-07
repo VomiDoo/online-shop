@@ -53,11 +53,19 @@
     .login-window__input {
       color: #fff;
       background-color: #252525;
-      border: 2px solid $color_green;
     }
 
     .login-window__btn {
       color: #fff;
     }
+
+    .main__sort {
+      background-color: #000;
+    }
+
+    .main__assortment {
+      border: 2px solid #fff;
+    }
   }
+  
 }

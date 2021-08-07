@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 
 import { themeContext } from "./context";
 import HeaderGuest from "./HeaderGuest";
+import HeaderUser from "./HeaderUser";
 
-const Header = () => {
-  
-  const { toggle } = useContext(themeContext);
+const Header = ({ user, guest, setGuest }) => {
+  const { toggle, theme } = useContext(themeContext);
 
   return (
     <header className="header">
@@ -14,10 +14,14 @@ const Header = () => {
         <h1 className="header__title-text">Kapibarynya</h1>
       </div>
       <label>
-        <input type="checkbox" onClick={toggle}></input>
+        <input
+          type="checkbox"
+          onClick={toggle}
+          defaultChecked={theme ? true : false}
+        ></input>
         <span className="check"></span>
       </label>
-      <HeaderGuest />
+      {guest ? <HeaderGuest /> : <HeaderUser user={user} setGuest={setGuest} />}
     </header>
   );
 };

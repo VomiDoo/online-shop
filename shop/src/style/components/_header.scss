@@ -97,4 +97,19 @@
     border: none;
   }
 
+  .header__user {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .header__user-name {
+    padding: 10px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+  }
 }

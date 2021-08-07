@@ -5,15 +5,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Theme } from "./components/context";
+import { store } from "./store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <Router>
       <Theme>
         <Redirect to="/home" />
         <App />
       </Theme>
     </Router>
+    </Provider>
     ,
   </React.StrictMode>,
   document.getElementById("root")
