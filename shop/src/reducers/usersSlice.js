@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  users: [],
+  users: JSON.parse(localStorage.getItem("users")) || [
+      {
+          login: 'admin',
+          password: 'admin',
+          email: 'admin@',
+          address: 'admin'
+      }
+  ],
 };
 
 const usersSlice = createSlice({
@@ -10,6 +17,7 @@ const usersSlice = createSlice({
   reducers: {
     addUser: (state, action) => {
       state.users.push(action.payload);
+      localStorage.setItem("users", JSON.stringify(state.users));
     },
   },
 });

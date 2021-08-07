@@ -4,7 +4,7 @@ import { themeContext } from "./context";
 import HeaderGuest from "./HeaderGuest";
 import HeaderUser from "./HeaderUser";
 
-const Header = ({ user, guest, setGuest }) => {
+const Header = ({ guest, setGuest }) => {
   const { toggle, theme } = useContext(themeContext);
 
   return (
@@ -21,7 +21,7 @@ const Header = ({ user, guest, setGuest }) => {
         ></input>
         <span className="check"></span>
       </label>
-      {guest ? <HeaderGuest /> : <HeaderUser user={user} setGuest={setGuest} />}
+      {guest ? <HeaderGuest /> : <HeaderUser setGuest={setGuest} />}
     </header>
   );
 };

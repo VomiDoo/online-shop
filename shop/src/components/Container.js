@@ -3,14 +3,14 @@ import Header from "./Header";
 import Main from "./Main";
 import LoginWindow from "./LoginWindow";
 
-const Container = ({ users, user, setUser, guest, setGuest }) => {
+const Container = ({ guest, setGuest }) => {
   return (
     <div className="container">
-      <Header user={user} setUser={setUser} guest={guest} setGuest={setGuest} />
+      <Header guest={guest} setGuest={setGuest} />
       <Main />
       <Switch>
         <Route path="/home/login">
-          <LoginWindow users={users} setUser={setUser} setGuest={setGuest} />
+          <LoginWindow setGuest={setGuest} />
         </Route>
       </Switch>
     </div>

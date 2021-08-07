@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../reducers/usersSlice";
 
 const RegistrationForm = () => {
   const history = useHistory();
   const [login, setLogin] = useState("");
+  const [loginPlaceholder, setLoginPlaceholder] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [emailPlaceholder, setEmailPlaceholder] = useState("");
   const [address, setAddress] = useState("");
 
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.users.users);
 
   const saveLoginHandler = ({ target }) => {
     setLogin(target.value);
@@ -30,15 +33,23 @@ const RegistrationForm = () => {
 
   const saveUserHandler = () => {
     if (login && password && email && address) {
-      dispatch(
-        addUser({
-          login: login,
-          password: password,
-          email: email,
-          address: address,
-        })
-      );
-      history.push("/home");
+      if (users.some((user) => user.login === login)) {
+        setLogin("");
+        setLoginPlaceholder("This login is already registered");
+      } else if (users.some((user) => user.email === email)) {
+        setEmail("");
+        setEmailPlaceholder("This email is already registered");
+      } else {
+        dispatch(
+          addUser({
+            login: login,
+            password: password,
+            email: email,
+            address: address,
+          })
+        );
+        history.push("/home");
+      }
     }
   };
 
@@ -56,6 +67,11 @@ const RegistrationForm = () => {
             <input
               className={`registration__input ${login ? "" : "error"}`}
               onChange={saveLoginHandler}
+              maxLength={15}
+              placeholder={
+                loginPlaceholder ? loginPlaceholder : "Max length: 15"
+              }
+              value={login}
             ></input>
           </p>
           <p className="registtation__input-name">
@@ -63,6 +79,8 @@ const RegistrationForm = () => {
             <input
               className={`registration__input ${password ? "" : "error"}`}
               onChange={savePasswordHandler}
+              maxLength={15}
+              placeholder="Max length: 15"
             ></input>
           </p>
           <p className="registtation__input-name">
@@ -70,6 +88,8 @@ const RegistrationForm = () => {
             <input
               className={`registration__input ${email ? "" : "error"}`}
               onChange={saveEmailHandler}
+              value={email}
+              placeholder={emailPlaceholder ? emailPlaceholder : ""}
             ></input>
           </p>
           <p className="registtation__input-name">

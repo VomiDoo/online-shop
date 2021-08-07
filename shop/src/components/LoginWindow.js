@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addActualUser } from "../reducers/actualUserSlice";
 
-const LoginWindow = ({ setUser, setGuest }) => {
+const LoginWindow = ({ setGuest }) => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
   const users = useSelector((state) => state.users.users);
+
+  const dispatch = useDispatch();
 
   const loginHandler = ({ target }) => {
     setLogin(target.value);
@@ -18,9 +21,12 @@ const LoginWindow = ({ setUser, setGuest }) => {
 
   const confirmHandler = () => {
     users.forEach((user) => {
-      if (user.login === login && user.password === password) {
+      if (
+        (user.login === login || user.email === login) &&
+        user.password === password
+      ) {
         setGuest(false);
-        setUser(user);
+        dispatch(addActualUser(user));
         history.push("/home");
       }
     });
@@ -36,7 +42,7 @@ const LoginWindow = ({ setUser, setGuest }) => {
       <div className="login-window">
         <h2 className="login-window__title">Login</h2>
         <p className="login-window__input-name">
-          Login
+          Login or email
           <br></br>
           <input
             type="text"
