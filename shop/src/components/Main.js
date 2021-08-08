@@ -1,5 +1,4 @@
-import Showcase from './Showcase';
-import { Switch, Route } from "react-router-dom";
+import Showcase from "./Showcase";
 
 const Main = () => {
   return (

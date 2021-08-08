@@ -4,10 +4,11 @@ import { Switch, Route } from "react-router-dom";
 import Container from "./components/Container";
 import { themeContext } from "./components/context";
 import RegistrationForm from "./components/RegistrationForm";
+import ItemAddWindow from "./components/ItemAddWindow";
 
 const App = () => {
   const { theme } = useContext(themeContext);
-  const [guest, setGuest] = useState(true);
+  const [guest, setGuest] = useState((JSON.parse(localStorage.getItem("actualUser")) === null) ? true : false);
 
   return (
     <div className={`wrap ${theme}`}>
@@ -20,6 +21,9 @@ const App = () => {
         </Route>
         <Route path="/registration">
           <RegistrationForm />
+        </Route>
+        <Route path="/add-item">
+          <ItemAddWindow />
         </Route>
       </Switch>
     </div>

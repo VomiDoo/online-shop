@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   users: JSON.parse(localStorage.getItem("users")) || [
-      {
-          login: 'admin',
-          password: 'admin',
-          email: 'admin@',
-          address: 'admin'
-      }
+    {
+      login: "admin",
+      password: "admin",
+      email: "admin@",
+      address: "admin",
+    },
   ],
 };
 
