@@ -18,7 +18,6 @@ ReactDOM.render(
       </Theme>
     </Router>
     </Provider>
-    ,
   </React.StrictMode>,
   document.getElementById("root")
 );

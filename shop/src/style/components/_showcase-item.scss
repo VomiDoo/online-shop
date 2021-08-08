@@ -1,0 +1,125 @@
+.item--close {
+  display: flex;
+  width: 380px;
+  height: 500px;
+  margin-bottom: 20px;
+  padding: 30px;
+  color: #252525;
+  background-color: #fff;
+  border: 2px solid $color_green;
+  border-radius: 50px;
+  transition: 0.7s;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.item--open {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1230px;
+  height: 500px;
+  margin-bottom: 20px;
+  padding: 30px;
+  color: #252525;
+  background-color: #fff;
+  border: 2px solid $color_green;
+  border-radius: 50px;
+  transition: 0.7s;
+  z-index: 5;
+}
+
+.item__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  height: 100%;
+  margin-right: 50px;
+  color: #252525;
+}
+
+.item__img {
+  width: 300px;
+  height: 320px;
+  background: url(../../img/logo.jpg) no-repeat center/cover;
+  border: 2px solid $color_green;
+  border-radius: 50px;
+}
+
+.item__title {
+  width: 280px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.item__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 280px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.item__btn {
+  font-size: 25px;
+  font-weight: 600;
+  color: $color_green;
+  background: transparent;
+  border: none;
+}
+
+.item__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1130px;
+  height: 100%;
+  color: #252525;
+}
+
+.item__inform {
+  height: 130px;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.item__description-title {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.item__material--title {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.item__material {
+  font-size: 20px;
+}
+
+.item__size {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  font-size: 25px;
+
+  input {
+      width: 15px;
+      height: 15px;
+  }
+}
+
+.item__add-btn {
+  margin-left: 600px;
+  width: 200px;
+  font-size: 25px;
+  font-weight: 600;
+  color: $color_green;
+  background: transparent;
+  border: none;
+}

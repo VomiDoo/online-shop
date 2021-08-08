@@ -63,9 +63,38 @@
       background-color: #000;
     }
 
-    .main__assortment {
+    .main__showcase {
       border: 2px solid #fff;
     }
+
+    .item__img {
+      border: 2px solid #fff;
+    }
+
+    .item--close {
+      background-color: #000;
+      border: 2px solid #fff;
+    }
+
+    .item--open {
+      background-color: #000;
+      border: 2px solid #fff;
+    }
+
+    .item__left {
+      color: #fff;
+    }
+
+    .item__description {
+      color: #fff;
+    }
+  }
+
+  button:hover {
+    transition: .7s;
+    border: solid #fff;
+    border-radius: 50px;
+    
   }
   
 }
