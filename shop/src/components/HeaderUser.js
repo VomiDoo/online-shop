@@ -26,7 +26,7 @@ const HeaderUser = ({ setGuest }) => {
   const logoutHandler = () => {
     setGuest(true);
     dispatch(addActualUser(null));
-    history.push("/home/showcase")
+    history.push("/home/showcase");
   };
 
   return (

@@ -3,7 +3,7 @@ import { useHistory } from "react-router";
 
 const Order = () => {
   const actualUser = useSelector((state) => state.actualUser.actualUser);
-  const history = useHistory()
+  const history = useHistory();
 
   return (
     <div className="order">
@@ -20,7 +20,14 @@ const Order = () => {
         The order will be delivered to the address: {actualUser.address} during
         2 days
       </p>
-      <button className="order__btn" onClick={() => {history.push('/home/cart')}}>Return</button>
+      <button
+        className="order__btn"
+        onClick={() => {
+          history.push("/home/cart");
+        }}
+      >
+        Return
+      </button>
     </div>
   );
 };

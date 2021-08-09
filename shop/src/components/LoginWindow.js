@@ -27,13 +27,13 @@ const LoginWindow = ({ setGuest }) => {
       ) {
         setGuest(false);
         dispatch(addActualUser(user));
-        history.push("/home/showcase")
+        history.push("/home/showcase");
       }
     });
   };
 
   const cancelHandler = () => {
-    history.push("/home/showcase")
+    history.push("/home/showcase");
   };
 
   return (

@@ -23,18 +23,13 @@
         color: #fff;
       }
 
-      .registration__input {
-        color: #fff;
-        background: #252525;
-      }
-
       .registration__btn {
         color: #fff;
       }
     }
 
     .login-window__wrap {
-      background-color: #252525 ;
+      background-color: #252525;
     }
 
     .login-window {
@@ -125,10 +120,8 @@
   }
 
   button:hover {
-    transition: .7s;
+    transition: 0.7s;
     border: solid #fff;
     border-radius: 50px;
-    
   }
-  
 }

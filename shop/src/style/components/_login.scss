@@ -30,43 +30,42 @@
   z-index: 10;
 }
 
-
 .login-window__title {
-    font-size: 30px;
-    font-weight: 600;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .login-window__input-name {
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .login-window__input {
-    width: 250px;
-    height: 30px;
-    padding: 0 10px;
-    font-size: 20px;
-    color: #252525 ;
-    border: 2px solid $color_green;
-    border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #252525;
+  border: 2px solid $color_green;
+  border-radius: 25px;
 }
 
 .login-window__btns {
-    display: flex;
-    justify-content: space-between;
-    width: 270px;
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
 }
 
 .login-window__btn {
-    font-size: 25px;
-    font-weight: 600;
-    color: #252525;
-    background: transparent;
-    border: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: #252525;
+  background: transparent;
+  border: none;
 }
 
 .error {
-    color: red;
-    border: 2px solid red;
-    border-radius: 25px;
+  color: red;
+  border: 2px solid red;
+  border-radius: 25px;
 }

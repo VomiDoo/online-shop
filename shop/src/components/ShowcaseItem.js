@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const ShowcaseItem = ({ index, guest }) => {
   const [open, setOpen] = useState(false);
-  const [itemSize, setItemSize] = useState('')
+  const [itemSize, setItemSize] = useState("");
 
   const dispatch = useDispatch();
   const itemList = useSelector((state) => state.itemList.itemList);
@@ -15,9 +15,9 @@ const ShowcaseItem = ({ index, guest }) => {
   const openHandler = () => {
     setOpen(!open);
   };
-  const sizeHandler = ({ target}) => {
-    setItemSize(target.value)
-  }
+  const sizeHandler = ({ target }) => {
+    setItemSize(target.value);
+  };
 
   const addToCartHandler = () => {
     const cartObj = {
@@ -26,11 +26,11 @@ const ShowcaseItem = ({ index, guest }) => {
       coast: itemList[index].coast,
       size: itemSize,
       itemId: uuidv4(),
-    }
+    };
     dispatch(addToCart(cartObj));
-    const id = actualUser.uuid
+    const id = actualUser.uuid;
     dispatch(editUser({ id, actualUser }));
-    setOpen(false)
+    setOpen(false);
   };
 
   return (
@@ -62,7 +62,12 @@ const ShowcaseItem = ({ index, guest }) => {
               <>
                 <label>
                   XS <br></br>
-                  <input type="radio" name="size" value={'XS'} onClick={sizeHandler}></input>
+                  <input
+                    type="radio"
+                    name="size"
+                    value={"XS"}
+                    onClick={sizeHandler}
+                  ></input>
                 </label>
               </>
             ) : null}
@@ -70,7 +75,12 @@ const ShowcaseItem = ({ index, guest }) => {
               <>
                 <label>
                   S <br></br>
-                  <input type="radio" name="size" value={'S'} onClick={sizeHandler}></input>
+                  <input
+                    type="radio"
+                    name="size"
+                    value={"S"}
+                    onClick={sizeHandler}
+                  ></input>
                 </label>
               </>
             ) : null}
@@ -78,7 +88,12 @@ const ShowcaseItem = ({ index, guest }) => {
               <>
                 <label>
                   M <br></br>
-                  <input type="radio" name="size" value={'M'} onClick={sizeHandler}></input>
+                  <input
+                    type="radio"
+                    name="size"
+                    value={"M"}
+                    onClick={sizeHandler}
+                  ></input>
                 </label>
               </>
             ) : null}
@@ -86,7 +101,12 @@ const ShowcaseItem = ({ index, guest }) => {
               <>
                 <label>
                   L <br></br>
-                  <input type="radio" name="size" value={'L'} onClick={sizeHandler}></input>
+                  <input
+                    type="radio"
+                    name="size"
+                    value={"L"}
+                    onClick={sizeHandler}
+                  ></input>
                 </label>
               </>
             ) : null}
@@ -94,7 +114,12 @@ const ShowcaseItem = ({ index, guest }) => {
               <>
                 <label>
                   XL <br></br>
-                  <input type="radio" name="size" value={'XL'} onClick={sizeHandler}></input>
+                  <input
+                    type="radio"
+                    name="size"
+                    value={"XL"}
+                    onClick={sizeHandler}
+                  ></input>
                 </label>
               </>
             ) : null}
@@ -102,7 +127,12 @@ const ShowcaseItem = ({ index, guest }) => {
               <>
                 <label>
                   XXL <br></br>
-                  <input type="radio" name="size" value={'XXL'} onClick={sizeHandler}></input>
+                  <input
+                    type="radio"
+                    name="size"
+                    value={"XXL"}
+                    onClick={sizeHandler}
+                  ></input>
                 </label>
               </>
             ) : null}

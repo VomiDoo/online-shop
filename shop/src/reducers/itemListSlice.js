@@ -22,7 +22,8 @@ const initialState = {
       title: "Kourtney Dress",
       coast: "320",
       material: "Cellulosic fibres/viscose",
-      inform: "Wear the dress. The Kourtney is a midi length dress with a fitted bodice and center back smocking. It has a slim fitting faux wrap skirt with a high slit. The straps are adjustable so you can fit it to your liking.",
+      inform:
+        "Wear the dress. The Kourtney is a midi length dress with a fitted bodice and center back smocking. It has a slim fitting faux wrap skirt with a high slit. The straps are adjustable so you can fit it to your liking.",
       sizes: {
         xs: false,
         s: true,
@@ -37,7 +38,8 @@ const initialState = {
       title: "Bust Puff Sleeve Mini Dress",
       coast: "50",
       material: "Cotton",
-      inform: "This mini dress features a slim fit, a heart-shaped neckline, ruffled cup details, puffy short sleeves with button details at the cuffs and seams in rubber on the inside and a zipper and hook closure at the back. This mini dress comes in green.",
+      inform:
+        "This mini dress features a slim fit, a heart-shaped neckline, ruffled cup details, puffy short sleeves with button details at the cuffs and seams in rubber on the inside and a zipper and hook closure at the back. This mini dress comes in green.",
       sizes: {
         xs: true,
         s: true,
@@ -52,7 +54,8 @@ const initialState = {
       title: "Black Stretch Crepe Midi Dress",
       coast: "360",
       material: "Cellulosic fibres/viscose",
-      inform: "This stretch crepe midi dress is designed with a flattering sweetheart neckline and a gathered wrap bust detail. The skirt falls to a fitted silhouette finished with a side split.",
+      inform:
+        "This stretch crepe midi dress is designed with a flattering sweetheart neckline and a gathered wrap bust detail. The skirt falls to a fitted silhouette finished with a side split.",
       sizes: {
         xs: true,
         s: true,
@@ -67,7 +70,8 @@ const initialState = {
       title: "Winslow Dress",
       coast: "255",
       material: "Cellulosic fibres/viscose",
-      inform: "For brides, bridesmaids, and those attending their 17th wedding this year. The Winslow is a functional wrap dress with an adjustable waist tie, so you can wear it tight or loose depending on your mood. This dress also features a high slight to give your legs some breathing room.",
+      inform:
+        "For brides, bridesmaids, and those attending their 17th wedding this year. The Winslow is a functional wrap dress with an adjustable waist tie, so you can wear it tight or loose depending on your mood. This dress also features a high slight to give your legs some breathing room.",
       sizes: {
         xs: false,
         s: true,
@@ -82,7 +86,8 @@ const initialState = {
       title: "Ebb Dress",
       coast: "150",
       material: "Cotton",
-      inform: "This is a babydoll dress with flutter sleeves and a back tie detail. It’s made from lightweight organic cotton",
+      inform:
+        "This is a babydoll dress with flutter sleeves and a back tie detail. It’s made from lightweight organic cotton",
       sizes: {
         xs: true,
         s: true,
@@ -97,7 +102,8 @@ const initialState = {
       title: "Paiva Dress",
       coast: "340",
       material: "Cellulosic fibres/viscose",
-      inform: "For brides, bridesmaids, and those attending their 17th wedding this year. The Winslow is a functional wrap dress with an adjustable waist tie, so you can wear it tight or loose depending on your mood. This dress also features a high slight to give your legs some breathing room.",
+      inform:
+        "For brides, bridesmaids, and those attending their 17th wedding this year. The Winslow is a functional wrap dress with an adjustable waist tie, so you can wear it tight or loose depending on your mood. This dress also features a high slight to give your legs some breathing room.",
       sizes: {
         xs: true,
         s: false,

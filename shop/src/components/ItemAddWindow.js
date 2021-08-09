@@ -55,7 +55,7 @@ const ItemAddWindow = () => {
           img: img,
         };
         dispatch(addItem(obj));
-        history.push("/home/showcase")
+        history.push("/home/showcase");
       }
     }
   };
@@ -169,7 +169,7 @@ const ItemAddWindow = () => {
         <button
           className="add__btn"
           onClick={() => {
-            history.push("/home/showcase")
+            history.push("/home/showcase");
           }}
         >
           Cancel

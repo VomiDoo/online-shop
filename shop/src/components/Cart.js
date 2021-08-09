@@ -6,13 +6,13 @@ import { changeTotalSum } from "../reducers/actualUserSlice";
 const Cart = () => {
   const cartList = useSelector((state) => state.actualUser.actualUser.cart);
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
 
   let sum = 0;
 
   cartList.forEach((item) => {
     sum += +item.coast;
-    dispatch(changeTotalSum(sum))
+    dispatch(changeTotalSum(sum));
   });
 
   return (
@@ -21,7 +21,14 @@ const Cart = () => {
       <div className="cart__total">
         <p className="cart__amount">Amount of goods: {cartList.length}</p>
         <p className="cart__sum">Amount of purchases: {sum} $</p>
-        <button className="cart__btn" onClick={() => {history.push('/order')}}>Buy</button>
+        <button
+          className="cart__btn"
+          onClick={() => {
+            history.push("/order");
+          }}
+        >
+          Buy
+        </button>
       </div>
       <ul className="cart__list">
         {cartList.map((item, index) => (
