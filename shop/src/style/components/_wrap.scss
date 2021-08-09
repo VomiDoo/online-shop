@@ -1,0 +1,127 @@
+.wrap {
+  width: 100%;
+  min-height: 1000px;
+  background-color: rgb(231, 228, 228);
+  transition: 0.7s;
+
+  &.black {
+    background-color: #252525;
+
+    .header {
+      background-color: #000;
+    }
+
+    .registration {
+      background-color: #000;
+      border: 2px solid $color_green;
+
+      .registration__title {
+        color: #fff;
+      }
+
+      .registtation__input-name {
+        color: #fff;
+      }
+
+      .registration__btn {
+        color: #fff;
+      }
+    }
+
+    .login-window__wrap {
+      background-color: #252525;
+    }
+
+    .login-window {
+      background-color: #000;
+      border: 2px solid $color_green;
+    }
+
+    .login-window__title {
+      color: #fff;
+    }
+
+    .login-window__input-name {
+      color: #fff;
+    }
+
+    .login-window__input {
+      color: #fff;
+      background-color: #252525;
+    }
+
+    .login-window__btn {
+      color: #fff;
+    }
+
+    .main__sort {
+      background-color: #000;
+    }
+
+    .main__showcase {
+      border: 2px solid #fff;
+    }
+
+    .item__img {
+      border: 2px solid #fff;
+    }
+
+    .item--close {
+      background-color: #000;
+      border: 2px solid #fff;
+    }
+
+    .item--open {
+      background-color: #000;
+      border: 2px solid #fff;
+    }
+
+    .item__left {
+      color: #fff;
+    }
+
+    .item__description {
+      color: #fff;
+    }
+
+    .cart {
+      border: 2px solid #fff;
+    }
+
+    .cart__title {
+      color: #fff;
+    }
+
+    .cart__item {
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .cart__item--img {
+      border: 2px solid #fff;
+    }
+
+    .cart__total {
+      border: 2px solid #fff;
+    }
+
+    .cart__sum {
+      color: #fff;
+    }
+
+    .cart__amount {
+      color: #fff;
+    }
+
+    .order {
+      color: #fff;
+      border: 2px solid #fff;
+    }
+  }
+
+  button:hover {
+    transition: 0.7s;
+    border: solid #fff;
+    border-radius: 50px;
+  }
+}
