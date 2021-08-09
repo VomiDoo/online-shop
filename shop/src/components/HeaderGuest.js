@@ -7,7 +7,7 @@ const HeaderGuest = () => {
       <button
         className="header__btn"
         onClick={() => {
-          history.push("/home/login");
+          history.push("/home/showcase/login");
         }}
       >
         Login

@@ -5,6 +5,8 @@ import Container from "./components/Container";
 import { themeContext } from "./components/context";
 import RegistrationForm from "./components/RegistrationForm";
 import ItemAddWindow from "./components/ItemAddWindow";
+import Order from "./components/Order";
+
 
 const App = () => {
   const { theme } = useContext(themeContext);
@@ -25,10 +27,14 @@ const App = () => {
         <Route path="/add-item">
           <ItemAddWindow />
         </Route>
+        <Route path="/order">
+          <Order />
+        </Route>
       </Switch>
     </div>
   );
 };
+
 
 
 export default App;

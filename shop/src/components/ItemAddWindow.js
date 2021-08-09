@@ -55,7 +55,7 @@ const ItemAddWindow = () => {
           img: img,
         };
         dispatch(addItem(obj));
-        history.push("/home");
+        history.push("/home/showcase")
       }
     }
   };
@@ -77,7 +77,7 @@ const ItemAddWindow = () => {
       <p className="add__name">
         Coast ($) <br></br>
         <input
-          type="text"
+          type="number"
           className="add__input"
           maxLength={5}
           onChange={coastHandler}
@@ -169,7 +169,7 @@ const ItemAddWindow = () => {
         <button
           className="add__btn"
           onClick={() => {
-            history.push("/home");
+            history.push("/home/showcase")
           }}
         >
           Cancel

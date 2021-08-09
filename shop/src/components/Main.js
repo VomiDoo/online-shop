@@ -1,10 +1,10 @@
 import Showcase from "./Showcase";
 
-const Main = () => {
+const Main = ({ guest }) => {
   return (
     <div className="main">
       <div className="main__sort"></div>
-      <Showcase />
+      <Showcase guest={guest} />
     </div>
   );
 };

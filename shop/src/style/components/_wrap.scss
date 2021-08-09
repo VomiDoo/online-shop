@@ -88,6 +88,40 @@
     .item__description {
       color: #fff;
     }
+
+    .cart {
+      border: 2px solid #fff;
+    }
+
+    .cart__title {
+      color: #fff;
+    }
+
+    .cart__item {
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .cart__item--img {
+      border: 2px solid #fff;
+    }
+
+    .cart__total {
+      border: 2px solid #fff;
+    }
+
+    .cart__sum {
+      color: #fff;
+    }
+
+    .cart__amount {
+      color: #fff;
+    }
+
+    .order {
+      color: #fff;
+      border: 2px solid #fff;
+    }
   }
 
   button:hover {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 import { addUser } from "../reducers/usersSlice";
 
 const RegistrationForm = () => {
@@ -46,15 +47,18 @@ const RegistrationForm = () => {
             password: password,
             email: email,
             address: address,
+            uuid: uuidv4(),
+            cart: [],
+            totalSum: 0,
           })
         );
-        history.push("/home");
+        history.push("/home/showcase");
       }
     }
   };
 
   const cancelHandler = () => {
-    history.push("/home");
+    history.push("/home/showcase");
   };
 
   return (
